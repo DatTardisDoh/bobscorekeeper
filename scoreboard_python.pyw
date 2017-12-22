@@ -79,7 +79,6 @@ def timer():
                 break
             else:
                     print("I don't understand, can you say that again?")
-                    # fix here, endless loop
     counter(sec)
     questionAnswer()
     timerDone = True
@@ -113,18 +112,7 @@ def scoreboard():
                 break
             else:
                 print("Say that again?")
-                # another endless loop to fix
 
 
 timer()
 scoreboard()
-
-''' The parts needed:
-timer x
-scoreboard x
-who's up?
-question pdisplay
-question database
-UI
-round summary (printable)
-'''
