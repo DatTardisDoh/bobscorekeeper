@@ -1,13 +1,14 @@
 import time
-import webbrowser
 import tkinter as tk
 from openpyxl import load_workbook
 import random
 
 
-wb2 = load_workbook('C:\MoneyJobKeeper.xlsx', data_only=True)
+wb2 = load_workbook('C:/Users/DatTardisDoh/Documents/bobscorekeeper/'
+                    + 'scoreboard/bobquestions.xlsx', data_only=True)
 # finds a workbook at C:\MoneyJobKeeper.xlsx
-ws2 = wb2.active  # sets only sheet on that workbook to current sheet
+ws2 = wb2.active
+# sets only sheet on that workbook to current sheet
 totalQuestions = ws2['J3']
 # detects file that reads out the amount of questions in the worksheet
 rando = random.randint(2, int(totalQuestions.value)+1)
@@ -18,7 +19,7 @@ global sec
 def questionDisplay():
     question = ws2['C' + str(rando)]
     # finds location of question that has been chosen
-    print("\n" + question.value)  # puts out all info for the reader to see
+    print("\n" + question.value + "\n")  # puts out all info for the reader
 
 
 def questionAnswer():
